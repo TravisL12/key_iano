@@ -17,15 +17,15 @@
       width: 35px;
       border-top: 1px solid black;
       border-right: 1px solid black; }
-    .container ul li#del, .container ul li#tab, .container ul li#ctrl, .container ul li#command {
-      width: 52.5px; }
-    .container ul li#caps, .container ul li#return {
-      width: 61.25px; }
-    .container ul li#shift {
-      width: 78.75px; }
-    .container ul li#opt {
-      width: 43.75px; }
-    .container ul li#space {
-      width: 210px; }
+      .container ul li#del, .container ul li#tab, .container ul li#ctrl, .container ul li#left-cmd, .container ul li#right-cmd {
+        width: 52.5px; }
+      .container ul li#caps, .container ul li#return {
+        width: 61.25px; }
+      .container ul li#shift {
+        width: 78.75px; }
+      .container ul li#opt {
+        width: 43.75px; }
+      .container ul li#space {
+        width: 210px; }
   .container .keydown {
     background: #05FF22; }

@@ -1,9 +1,10 @@
 var noteDown = function(key){
-  $('#' + keyDict[key]).addClass('keydown');
+  $('#' + keyDict[key].val + " audio")[0].play();
+  $('#' + keyDict[key].val).addClass('keydown');
 }
 
 var noteUp = function(key){
-  $('#' + keyDict[key]).removeClass('keydown');
+  $('#' + keyDict[key].val).removeClass('keydown');
 }
 
 $(document).ready(function(){
