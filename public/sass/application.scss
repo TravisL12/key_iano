@@ -1,0 +1,37 @@
+$key-height: 35px;
+$key-width: 35px;
+$container-width: 800px;
+
+.container{
+  width: $container-width;
+  margin: 200px 20%;
+
+  ul{
+    width: $container-width * 0.64;
+    &.bottom{
+      li { border-bottom: 1px solid black; }
+    }
+
+    &.row{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-left: 1px solid black;
+    }
+
+    li{
+      float: left;
+      text-align: center;
+      height: $key-height;
+      width: $key-width;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    li#del, li#tab, li#ctrl, li#command{ width: $key-width * 1.5; }
+    li#caps, li#return{ width: $key-width * 1.75; }
+    li#shift{ width: $key-width * 2.25; }
+    li#opt{ width: $key-width * 1.25; }
+    li#space{ width: $key-width * 6; }
+  }
+}
