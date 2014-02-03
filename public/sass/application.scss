@@ -34,4 +34,7 @@ $container-width: 800px;
     li#opt{ width: $key-width * 1.25; }
     li#space{ width: $key-width * 6; }
   }
+
+  .keydown{ background: #05FF22; }
+
 }
