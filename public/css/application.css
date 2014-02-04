@@ -17,6 +17,9 @@
       width: 35px;
       border-top: 1px solid black;
       border-right: 1px solid black; }
+      .container ul li p.note {
+        font-size: 12px;
+        margin: 0; }
       .container ul li#del, .container ul li#tab, .container ul li#ctrl, .container ul li#left-cmd, .container ul li#right-cmd {
         width: 52.5px; }
       .container ul li#caps, .container ul li#return {

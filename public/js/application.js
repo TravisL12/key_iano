@@ -1,6 +1,6 @@
 var noteDown = function(key){
-  $('#' + keyDict[key].val + " audio")[0].play();
-  $('#' + keyDict[key].val).addClass('keydown');
+    $('#' + keyDict[key].val + " audio")[0].play();
+    $('#' + keyDict[key].val).addClass('keydown');
 }
 
 var noteUp = function(key){
