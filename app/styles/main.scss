@@ -118,7 +118,13 @@ $piano-black: #1a1a1a;
       &.keydown {
         .key-top {
           margin-top: 5px;
-          background: #0F0 !important;
+          @include permiter-white-key;
+        }
+      }
+      &.keydown.flat {
+        .key-top {
+          margin-top: 5px;
+          @include perimeter-black-key;
         }
       }
     }

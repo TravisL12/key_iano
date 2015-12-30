@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body ng-app="keyIanoNewApp">
+<body ng-app="keyIanoNewApp" ng-controller='MainCtrl' ng-keydown='noteDown($event)' ng-keyup='noteUp($event)'>
 <!--[if lte IE 8]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -44,7 +44,6 @@
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/keyboard.js"></script>
   <script src="scripts/services/notes.js"></script>
-  <script src="scripts/services/keyboardlayout.js"></script>
   <!-- endbuild -->
 </body>
 </html>

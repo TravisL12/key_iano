@@ -1,6 +1,6 @@
-<div class='keyboard-container' ng-keydown='notePressed($event)' tabindex='0'>
+<div class='keyboard-container'>
     <ul class='key-row'>
-        <li ng-click='noteClicked($event)' ng-class='{keydown: key.active}' ng-repeat='key in keyboardLayout' class='{{key.class}}'>
+        <li ng-class='{keydown: key.active}' ng-repeat='key in keyboardLayout' class='{{key.class}}'>
             <div class='key-top'>{{key.key}}</div>
         </li>
     </ul>
