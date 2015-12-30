@@ -13,10 +13,10 @@ angular.module('keyIanoNewApp')
 
     function playSound(e, note) {
       if (note && note.sound) {
-        e.target.className = 'keydown';
+        // e.target.className = 'keydown';
         note.sound.play();
         note.sound._onend[0] = function() {
-          e.target.className = '';
+          // e.target.className = '';
         };
       }
     }
