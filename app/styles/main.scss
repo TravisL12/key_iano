@@ -3,43 +3,39 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-$key-dimension: 50px;
-$key-height: $key-dimension;
-$key-width: $key-dimension;
-$container-width: 1200px;
+$container-width: 1000px;
+$key-dimension: $container-width * 0.065;
 
 .keyboard-container{
   width: $container-width;
-  margin: 200px 20%;
+  margin: 200px auto;
 
-  ul{
-    width: $container-width * 0.64;
+  ul.key-row {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid black;
+
     &:last-child li { border-bottom: 1px solid black; }
-
-    &.key-row{
-      float: left;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      border-left: 1px solid black;
-    }
 
     li{
       float: left;
       text-align: center;
-      height: $key-height;
-      width: $key-width;
+      height: $key-dimension;
+      width: $key-dimension;
       border-top: 1px solid black;
       border-right: 1px solid black;
       & p.note{ font-size: 12px; margin: 0;}
-      &.del, &.tab, &.ctrl, &.left-cmd, &.right-cmd { width: $key-width * 1.5; }
-      &.caps, &.return                              { width: $key-width * 1.75; }
-      &.shift                                       { width: $key-width * 2.25; }
-      &.opt                                         { width: $key-width * 1.25; }
-      &.space                                       { width: $key-width * 6; }
+      &.del, &.tab, &.ctrl, &.left-cmd, &.right-cmd { width: $key-dimension * 1.5; }
+      &.caps, &.return                              { width: $key-dimension * 1.75; }
+      &.shift                                       { width: $key-dimension * 2.25; }
+      &.opt                                         { width: $key-dimension * 1.25; }
+      &.space                                       { width: $key-dimension * 6; }
     }
   }
 
-  .keydown{ background: #05FF22; }
+  .keydown{ background: #0F0; }
 
 }
