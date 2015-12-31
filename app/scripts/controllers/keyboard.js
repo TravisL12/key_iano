@@ -10,4 +10,16 @@
 angular.module('keyIanoNewApp')
   .controller('KeyboardCtrl', function ($scope, Notes) {
     $scope.keyboardLayout = Notes.keys();
+
+    $scope.activeNotes = [];
+
+    $scope.$on('activeNote', function(event, note) {
+      $scope.activeNotes.push(note);
+    });
+
+    $scope.$on('removeActiveNote', function() {
+      $scope.activeNotes.shift();
+      $scope.$apply();
+    });
+
   });
