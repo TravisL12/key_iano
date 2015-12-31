@@ -10,8 +10,6 @@
 angular.module('keyIanoNewApp')
   .controller('MainCtrl', function ($scope, Notes) {
 
-    $scope.octave = 3;
-
     function keyLookup(e) {
       return Notes.codeLookup(e.keyCode);
     }
