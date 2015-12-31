@@ -1,7 +1,17 @@
+<div class='scroll-active-notes'>
+  <div class='display-notes' ng-repeat='active in activeNotes track by $index'>
+    <p class='letter'>{{active.key | uppercase}}</p>
+    <span class='note'>{{active.note}}</span>
+  </div>
+</div>
+
 <div class='keyboard-container'>
-    <ul class='key-row'>
-        <li ng-class='{keydown: key.active}' ng-repeat='key in keyboardLayout' class='{{key.class}}'>
-            <div class='key-top'>{{key.key}}</div>
-        </li>
-    </ul>
+  <ul class='key-row'>
+    <li ng-class='{keydown: key.active, flat: key.note[1]=="b"}' ng-repeat='key in keyboardLayout' class='{{key.style}}'>
+      <div class='key-top'>
+        <span class='letter'>{{key.key}}</span>
+        <span class='note'>{{key.note}}</span>
+      </div>
+    </li>
+  </ul>
 </div>
