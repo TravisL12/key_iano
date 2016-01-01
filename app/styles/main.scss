@@ -59,19 +59,44 @@ $piano-black: #1a1a1a;
 .scroll-active-notes {
   position: relative;
   width: 100%;
+  min-width: 800px;
   height: 400px;
   margin: 30px auto;
   padding: 50px 150px;
   border: 1px solid;
   overflow-y: auto;
-  .display-notes {
-    display: inline-block;
-    width: 60px;
-    text-align: center;
-    padding: 2px 4px;
-    margin: 2px 5px;
-    background: #aaa;
+
+  .staff {
+    position: relative;
+    img {
+      position: absolute;
+      left: 0;
+    }
+    ul.music {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .line {
+        width: 100%;
+        margin-top: 20px;
+        border-top: 1px solid;
+        &.zero, &.six {
+          border-top: none;
+        }
+        &.six { margin: 0; }
+      }
+    }
   }
+
+  .staff.treble {
+    margin-bottom: 80px;
+    img { height: 110px; }
+  }
+
+  .staff.bass {
+    img { height: 60px; }
+  }
+
 }
 
 .keyboard-container {

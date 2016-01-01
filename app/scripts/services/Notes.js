@@ -79,7 +79,7 @@
     keyCodeDict[keyLibrary[i].keyCode] = i;
   }
 
-  // NOTE FILE NAMES
+  // NOTE FILE NAMES (missing a few)
   var notes = [                                      '0A','0Bb','0B',
     '1C',      '1D','1Eb','1E','1F',           '1Ab','1A','1Bb','1B',
     '2C',           '2Eb','2E','2F','2Gb','2G','2Ab','2A','2Bb','2B',
@@ -95,13 +95,12 @@
     $rootScope.$broadcast('removeActiveNote');
   };
   // Build sound library independant of keyboard letter
-  var soundDict   = {};
+  var soundDict = {};
   for (var j in notes) {
-    var sound = new window.Howl({
+    soundDict[notes[j]] = new window.Howl({
       urls: ['sound/' + notes[j] + '.mp3'],
       onend: endCallback
     });
-    soundDict[notes[j]] = sound;
   }
 
   return {
