@@ -10,12 +10,8 @@
 angular.module('keyIanoNewApp')
   .controller('MainCtrl', function ($scope, Notes) {
 
-    function keyLookup(e) {
-      return Notes.codeLookup(e.keyCode);
-    }
-
     $scope.noteDown = function(e){
-      var key = keyLookup(e);
+      var key = Notes.keyCodeLookup(e.keyCode);
 
       if (key && key.sound) {
         $scope.$broadcast('activeNote', key);
@@ -25,7 +21,7 @@ angular.module('keyIanoNewApp')
     };
 
     $scope.noteUp = function(e){
-      var key = keyLookup(e);
+      var key = Notes.keyCodeLookup(e.keyCode);
       if (key && key.active) {
         key.active = false;
       }
