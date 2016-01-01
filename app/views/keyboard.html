@@ -7,7 +7,7 @@
 
 <div class='keyboard-container'>
   <ul class='key-row'>
-    <li ng-class='{keydown: key.active, flat: key.note[2]=="b"}' ng-repeat='key in keyboardLayout' class='{{key.style}}'>
+    <li ng-class='{keydown: key.active, flat: key.note[2]=="b"}' ng-repeat='key in keyboardLayout' class='{{key.cssClass}}'>
       <div class='key-top'>
         <span class='letter'>{{key.key}}</span>
         <span ng-if='!editMode' class='note'>{{key.note}}</span>
