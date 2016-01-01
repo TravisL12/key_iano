@@ -7,11 +7,15 @@
 
 <div class='keyboard-container'>
   <ul class='key-row'>
-    <li ng-class='{keydown: key.active, flat: key.note[1]=="b"}' ng-repeat='key in keyboardLayout' class='{{key.style}}'>
+    <li ng-class='{keydown: key.active, flat: key.note[2]=="b"}' ng-repeat='key in keyboardLayout' class='{{key.style}}'>
       <div class='key-top'>
         <span class='letter'>{{key.key}}</span>
-        <span class='note'>{{key.note}}</span>
+        <span ng-if='!editMode' class='note'>{{key.note}}</span>
+        <select ng-if='editMode' ng-model='key.note' ng-options='note for note in notes'></select>
       </div>
     </li>
   </ul>
 </div>
+
+<!-- Temporary Edit mode for moving keys around -->
+<div><button ng-click='editMode = !editMode'>Edit Mode: {{editMode ? 'On' : 'Off'}}</button></div>
