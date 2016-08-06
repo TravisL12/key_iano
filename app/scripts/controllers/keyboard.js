@@ -7,27 +7,26 @@
  * # KeyboardCtrl
  * Controller of the keyIanoNewApp
  */
-angular.module('keyIanoNewApp')
-  .controller('KeyboardCtrl', function ($scope, Notes) {
-    $scope.keyboardLayout = Notes.keys();
-    $scope.notes = Notes.notes();
-    $scope.editMode = false;
+angular.module('keyIanoNewApp').controller('KeyboardCtrl', function ($scope, Notes) {
+  $scope.keyboardLayout = Notes.keys();
+  $scope.notes = Notes.notes();
+  $scope.editMode = false;
 
-    $scope.activeNotes = [];
+  $scope.activeNotes = [];
 
-    $scope.$on('activeNote', function(event, note) {
-      var noteElement = angular.element('#' + note.noteId + '.draw-notes');
-      var elementChar = String.fromCharCode(note.keyCode);
-      noteElement.text(elementChar).css('display', 'block');
-      $scope.activeNotes.push(note);
-    });
-
-    $scope.$on('removeActiveNote', function() {
-      $scope.activeNotes.shift();
-      $scope.$apply();
-    });
-
+  $scope.$on('activeNote', function(event, note) {
+    // var noteElement = angular.element('#' + note.cssId + '.draw-notes');
+    // noteElement.text(elementChar).css('display', 'block');
+    // note.keyChar = String.fromCharCode(note.keyCode);
+    $scope.activeNotes.push(note);
   });
+
+  $scope.$on('removeActiveNote', function() {
+    $scope.activeNotes.shift();
+    $scope.$apply();
+  });
+
+});
 
 // Music format
 // http://www.answers.com/Q/How_do_you_play_three_blind_mice_on_the_piano

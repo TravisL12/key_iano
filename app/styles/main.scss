@@ -15,9 +15,7 @@ $piano-black: #1a1a1a;
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(254,254,254,1)), color-stop(49%, rgba(209,209,209,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(100%, rgba(226,226,226,1)));
   background: -webkit-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 50%, rgba(226,226,226,1) 100%);
   background: -o-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 50%, rgba(226,226,226,1) 100%);
-  background: -ms-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 50%, rgba(226,226,226,1) 100%);
   background: linear-gradient(to right, rgba(254,254,254,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 50%, rgba(226,226,226,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2', GradientType=1 );
 }
 
 @mixin white-key {
@@ -27,9 +25,7 @@ $piano-black: #1a1a1a;
   background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
   background: -webkit-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
   background: -o-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
   background: linear-gradient(135deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 );
 }
 
 @mixin perimeter-black-key {
@@ -39,9 +35,7 @@ $piano-black: #1a1a1a;
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,1)), color-stop(6%, rgba(102,102,102,1)), color-stop(23%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
   background: -webkit-linear-gradient(left, rgba(102,102,102,1) 0%, rgba(102,102,102,1) 6%, rgba(71,71,71,1) 23%, rgba(44,44,44,1) 50%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
   background: -o-linear-gradient(left, rgba(102,102,102,1) 0%, rgba(102,102,102,1) 6%, rgba(71,71,71,1) 23%, rgba(44,44,44,1) 50%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-  background: -ms-linear-gradient(left, rgba(102,102,102,1) 0%, rgba(102,102,102,1) 6%, rgba(71,71,71,1) 23%, rgba(44,44,44,1) 50%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
   background: linear-gradient(to right, rgba(102,102,102,1) 0%, rgba(102,102,102,1) 6%, rgba(71,71,71,1) 23%, rgba(44,44,44,1) 50%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#131313', GradientType=1 );
 }
 
 @mixin black-key {
@@ -51,9 +45,16 @@ $piano-black: #1a1a1a;
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(19,19,19,1)), color-stop(9%, rgba(28,28,28,1)), color-stop(24%, rgba(43,43,43,1)), color-stop(40%, rgba(17,17,17,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(77%, rgba(71,71,71,1)), color-stop(94%, rgba(102,102,102,1)), color-stop(100%, rgba(102,102,102,1)));
   background: -webkit-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 9%, rgba(43,43,43,1) 24%, rgba(17,17,17,1) 40%, rgba(44,44,44,1) 50%, rgba(71,71,71,1) 77%, rgba(102,102,102,1) 94%, rgba(102,102,102,1) 100%);
   background: -o-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 9%, rgba(43,43,43,1) 24%, rgba(17,17,17,1) 40%, rgba(44,44,44,1) 50%, rgba(71,71,71,1) 77%, rgba(102,102,102,1) 94%, rgba(102,102,102,1) 100%);
-  background: -ms-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 9%, rgba(43,43,43,1) 24%, rgba(17,17,17,1) 40%, rgba(44,44,44,1) 50%, rgba(71,71,71,1) 77%, rgba(102,102,102,1) 94%, rgba(102,102,102,1) 100%);
   background: linear-gradient(to right, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 9%, rgba(43,43,43,1) 24%, rgba(17,17,17,1) 40%, rgba(44,44,44,1) 50%, rgba(71,71,71,1) 77%, rgba(102,102,102,1) 94%, rgba(102,102,102,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#666666', GradientType=1 );
+}
+
+.beyond-staff {
+  content: '';
+  position: absolute;
+  border-top: 1px solid black;
+  width: 150%;
+  left: -7px;
+  z-index: -1;
 }
 
 .scroll-active-notes {
@@ -71,19 +72,88 @@ $piano-black: #1a1a1a;
 
     .draw-notes {
       position: relative;
-      display: none;
       z-index: 100;
       float: left;
-      width: 30px;
+      width: 25px;
       height: 20px;
       font-size: 12px;
       border-radius: 50%;
       color: white;
       text-align: center;
       padding-top: 3px;
+      margin-right: 3px;
       background: black;
+
+      // Add staff line through note
+      &.C3,&.Ab4,&.A4,&.C5,&.Eb5,&.E5,&.Gb5,&.G5,&.Bb5,&.B5,&.Db6,&.D6,&.F6,&.Ab6,&.A6,&.C7 {
+        &:before {
+          @extend .beyond-staff;
+          border-top: 1px solid black;
+          top: 9px;
+        }
+      }
+
+      // Add staff line above/below note
+      &.Bb4,&.B4,&.Db5,&.D5,&.F5,&.Ab5,&.A5,&.C6,&.Eb6,&.E6,&.Gb6,&.G6,&.Bb6,&.B6 {
+        &:before {
+          @extend .beyond-staff;
+          border-bottom: 1px solid black;
+          height: 108%;
+          top: -1px;
+        }
+      }
+
+      &.C3  { margin-top: 116px; }
+      &.Db3 { margin-top: 105px; }
+      &.D3  { margin-top: 105px; }
+      &.Eb3 { margin-top: 95px; }
+      &.E3  { margin-top: 95px; }
+      &.F3  { margin-top: 84px; }
+      &.Gb3 { margin-top: 74px; }
+      &.G3  { margin-top: 74px; }
+      &.Ab3 { margin-top: 63px; }
+      &.A3  { margin-top: 63px; }
+      &.Bb3 { margin-top: 53px; }
+      &.B3  { margin-top: 53px; }
+      &.C4  { margin-top: 42px; }
+      &.Db4 { margin-top: 32px; }
+      &.D4  { margin-top: 32px; }
+      &.Eb4 { margin-top: 21px; }
+      &.E4  { margin-top: 21px; }
+      &.F4  { margin-top: 11px; }
+      &.Gb4 { margin-top: 0px; }
+      &.G4  { margin-top: 0px; }
+      &.Ab4 { margin-top: -10px; }
+      &.A4  { margin-top: -10px; }
+      &.Bb4 { margin-top: -21px; }
+      &.B4  { margin-top: -21px; }
+      &.C5  { margin-top: -31px; }
+      &.Db5 { margin-top: -42px; }
+      &.D5  { margin-top: -42px; }
+      &.Eb5 { margin-top: -52px; }
+      &.E5  { margin-top: -52px; }
+      &.F5  { margin-top: 5px; }
+      &.Gb5 { margin-top: 5px; }
+      &.G5  { margin-top: 5px; }
+      &.Ab5 { margin-top: 5px; }
+      &.A5  { margin-top: 5px; }
+      &.Bb5 { margin-top: 5px; }
+      &.B5  { margin-top: 5px; }
+      &.C6  { margin-top: 5px; }
+      &.Db6 { margin-top: 5px; }
+      &.D6  { margin-top: 5px; }
+      &.Eb6 { margin-top: 5px; }
+      &.E6  { margin-top: 5px; }
+      &.F6  { margin-top: 5px; }
+      &.Gb6 { margin-top: 5px; }
+      &.G6  { margin-top: 5px; }
+      &.Ab6 { margin-top: 5px; }
+      &.A6  { margin-top: 5px; }
+      &.Bb6 { margin-top: 5px; }
+      &.B6  { margin-top: 5px; }
+      &.C7  { margin-top: 5px; }
+
     }
-    #C3 { margin-top: 95px; }
   }
 
   .staff {
@@ -98,18 +168,20 @@ $piano-black: #1a1a1a;
       padding: 0;
       .line {
         width: 100%;
+        box-sizing: border-box;
         margin-top: 20px;
         border-top: 1px solid;
         &.zero, &.six {
           border-top: none;
         }
         &.six { margin: 0; }
+        &.minus { border-top: 1px solid; }
       }
     }
   }
 
   .staff.treble {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     img { height: 110px; }
   }
 

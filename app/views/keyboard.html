@@ -1,10 +1,7 @@
 <div class='scroll-active-notes'>
 
   <div class='staff-notes'>
-    <div class='draw-notes' id='C3'>C3</div>
-    <div class='draw-notes' id='D3'>D3</div>
-    <div class='draw-notes' id='E3'>E3</div>
-    <div class='draw-notes' id='G3'>G3</div>
+    <div class='draw-notes' ng-class='note.cssId' ng-repeat='note in activeNotes track by $index'>{{note.key}}</div>
   </div>
 
   <div class='staff treble'>
@@ -17,6 +14,7 @@
       <li class='line two'></li>
       <li class='line one'></li>
       <li class='line zero'></li>
+      <!-- <li class='line zero'></li> -->
     </ul>
   </div>
 
