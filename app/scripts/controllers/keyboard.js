@@ -10,14 +10,9 @@
 angular.module('keyIanoNewApp').controller('KeyboardCtrl', function ($scope, Notes) {
   $scope.keyboardLayout = Notes.keys();
   $scope.notes = Notes.notes();
-  $scope.editMode = false;
-
   $scope.activeNotes = [];
 
   $scope.$on('activeNote', function(event, note) {
-    // var noteElement = angular.element('#' + note.cssId + '.draw-notes');
-    // noteElement.text(elementChar).css('display', 'block');
-    // note.keyChar = String.fromCharCode(note.keyCode);
     $scope.activeNotes.push(note);
   });
 

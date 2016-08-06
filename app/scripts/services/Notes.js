@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc service
- * @name keyIanoNewApp.notes
- * @description
- * # notes
- * Factory in the keyIanoNewApp.
- */
  angular.module('keyIanoNewApp').factory('Notes', function ($rootScope) {
 
   var keyLibrary = [
