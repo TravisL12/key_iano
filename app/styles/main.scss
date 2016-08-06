@@ -8,7 +8,7 @@ $key-dimension: $container-width * 0.065;
 $piano-white: #f8f8f8;
 $piano-black: #1a1a1a;
 
-@mixin permiter-white-key {
+@mixin perimeter-white-key {
   color: $piano-black;
   background: rgba(254,254,254,1);
   background: -moz-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 50%, rgba(226,226,226,1) 100%);
@@ -62,8 +62,7 @@ $piano-black: #1a1a1a;
   min-width: 800px;
   height: 400px;
   margin: 30px auto;
-  padding: 50px 150px;
-  border: 1px solid;
+  padding: 50px 100px;
   overflow-y: auto;
 
   .staff {
@@ -123,7 +122,7 @@ $piano-black: #1a1a1a;
       border-right: 1px solid black;
       padding: 0 3px 5px;
       border-radius: 10px;
-      @include permiter-white-key;
+      @include perimeter-white-key;
 
       &.del,
       &.tab,
@@ -170,7 +169,7 @@ $piano-black: #1a1a1a;
       &.keydown {
         .key-top {
           margin-top: 5px;
-          @include permiter-white-key;
+          @include perimeter-white-key;
         }
       }
       &.keydown.flat {

@@ -25,3 +25,51 @@ angular.module('keyIanoNewApp')
     });
 
   });
+
+// Music format
+// http://www.answers.com/Q/How_do_you_play_three_blind_mice_on_the_piano
+// var threeBlindMice = [
+//   { notes: ['E3'] }, { notes: ['D3'] }, { notes: ['C3'] },
+//   { notes: ['E3'] }, { notes: ['D3'] }, { notes: ['C3'] },
+
+//   { notes: ['G3'] }, { notes: ['F3'] }, { notes: ['F3'] }, { notes: ['E3'] },
+//   { notes: ['G3'] }, { notes: ['F3'] }, { notes: ['F3'] }, { notes: ['E3'] },
+
+//   { notes: ['G3'] },
+//   { notes: ['C3'] },
+//   { notes: ['C3'] },
+//   { notes: ['B3'] },
+//   { notes: ['A3'] },
+//   { notes: ['B3'] },
+//   { notes: ['C3'] },
+//   { notes: ['G3'] },
+
+//   { notes: ['G3'] },
+//   { notes: ['G3'] },
+//   { notes: ['C3'] },
+//   { notes: ['C3'] },
+//   { notes: ['C3'] },
+//   { notes: ['B3'] },
+//   { notes: ['A3'] },
+//   { notes: ['B3'] },
+//   { notes: ['C3'] },
+//   { notes: ['G3'] },
+
+//   { notes: ['G3'] },
+//   { notes: ['G3'] },
+//   { notes: ['C3'] },
+//   { notes: ['C3'] },
+//   { notes: ['C3'] },
+//   { notes: ['B3'] },
+//   { notes: ['A3'] },
+//   { notes: ['B3'] },
+//   { notes: ['C3'] },
+//   { notes: ['G3'] },
+//   { notes: ['G3'] },
+
+//   { notes: ['G3'] },
+//   { notes: ['F3'] },
+//   { notes: ['E3'] },
+//   { notes: ['D3'] },
+//   { notes: ['C3'] }
+// ]
