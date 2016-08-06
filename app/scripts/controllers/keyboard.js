@@ -16,6 +16,7 @@ angular.module('keyIanoNewApp')
     $scope.activeNotes = [];
 
     $scope.$on('activeNote', function(event, note) {
+      angular.element('#' + note.noteId + '.draw-notes').css('display', 'block');
       $scope.activeNotes.push(note);
     });
 

@@ -65,6 +65,27 @@ $piano-black: #1a1a1a;
   padding: 50px 100px;
   overflow-y: auto;
 
+  .staff-notes {
+    position: absolute;
+    left: 150px;
+
+    .draw-notes {
+      position: relative;
+      display: none;
+      z-index: 100;
+      float: left;
+      width: 30px;
+      height: 20px;
+      font-size: 12px;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      padding-top: 3px;
+      background: black;
+    }
+    #C3 { margin-top: 95px; }
+  }
+
   .staff {
     position: relative;
     img {
