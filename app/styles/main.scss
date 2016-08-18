@@ -210,6 +210,7 @@ $piano-black: #1a1a1a;
       border-right: 1px solid black;
       padding: 0 3px 5px;
       border-radius: 10px;
+      cursor: pointer;
       @include perimeter-white-key;
 
       &.del,

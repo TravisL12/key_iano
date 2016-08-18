@@ -8,9 +8,18 @@
  * Controller of the keyIanoNewApp
  */
 angular.module('keyIanoNewApp').controller('KeyboardCtrl', function ($scope, Notes) {
-  $scope.keyboardLayout = Notes.keys();
-  $scope.notes = Notes.notes();
+  $scope.keyboardLayout = Notes.keys;
+  $scope.notes = Notes.notes;
   $scope.activeNotes = [];
+
+  $scope.clickNote = function () {
+    var key = Notes.keyCodeLookup(this.key.keyCode);
+
+    if (key && key.sound) {
+      $scope.$broadcast('activeNote', key);
+      key.sound.play();
+    }
+  };
 
   $scope.$on('activeNote', function(event, note) {
     $scope.activeNotes.push(note);

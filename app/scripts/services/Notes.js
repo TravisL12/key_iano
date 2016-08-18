@@ -1,75 +1,82 @@
 'use strict';
 
- angular.module('keyIanoNewApp').factory('Notes', function ($rootScope) {
+ angular.module('keyIanoNewApp').factory('Notes', function ($rootScope, KeyCodes) {
 
   var keyLibrary = [
-    { note: '',    key: '`',      cssId: '',    cssClass:'tilde' ,  keyCode: 192  },
-    { note: '3C',  key: '1',      cssId: 'C3',  cssClass:''      ,  keyCode: 49   },
-    { note: '3Db', key: '2',      cssId: 'Db3', cssClass:''      ,  keyCode: 50   },
-    { note: '3D',  key: '3',      cssId: 'D3',  cssClass:''      ,  keyCode: 51   },
-    { note: '3Eb', key: '4',      cssId: 'Eb3', cssClass:''      ,  keyCode: 52   },
-    { note: '3E',  key: '5',      cssId: 'E3',  cssClass:''      ,  keyCode: 53   },
-    { note: '3F',  key: '6',      cssId: 'F3',  cssClass:''      ,  keyCode: 54   },
-    { note: '3Gb', key: '7',      cssId: 'Gb3', cssClass:''      ,  keyCode: 55   },
-    { note: '3G',  key: '8',      cssId: 'G3',  cssClass:''      ,  keyCode: 56   },
-    { note: '3Ab', key: '9',      cssId: 'Ab3', cssClass:''      ,  keyCode: 57   },
-    { note: '3A',  key: '0',      cssId: 'A3',  cssClass:''      ,  keyCode: 48   },
-    { note: '3Bb', key: '-',      cssId: 'Bb3', cssClass:''      ,  keyCode: 189  },
-    { note: '3B',  key: '=',      cssId: 'B3',  cssClass:''      ,  keyCode: 187  },
-    { note: '',    key: 'del',    cssId: '',    cssClass:'del'   ,  keyCode: 8    },
-    { note: '',    key: 'tab',    cssId: '',    cssClass:'tab'   ,  keyCode: 9    },
-    { note: '4C',  key: 'q',      cssId: 'C4',  cssClass:''      ,  keyCode: 81   },
-    { note: '4Db', key: 'w',      cssId: 'Db4', cssClass:''      ,  keyCode: 87   },
-    { note: '4D',  key: 'e',      cssId: 'D4',  cssClass:''      ,  keyCode: 69   },
-    { note: '4Eb', key: 'r',      cssId: 'Eb4', cssClass:''      ,  keyCode: 82   },
-    { note: '4E',  key: 't',      cssId: 'E4',  cssClass:''      ,  keyCode: 84   },
-    { note: '4F',  key: 'y',      cssId: 'F4',  cssClass:''      ,  keyCode: 89   },
-    { note: '4Gb', key: 'u',      cssId: 'Gb4', cssClass:''      ,  keyCode: 85   },
-    { note: '4G',  key: 'i',      cssId: 'G4',  cssClass:''      ,  keyCode: 73   },
-    { note: '4Ab', key: 'o',      cssId: 'Ab4', cssClass:''      ,  keyCode: 79   },
-    { note: '4A',  key: 'p',      cssId: 'A4',  cssClass:''      ,  keyCode: 80   },
-    { note: '4Bb', key: '[',      cssId: 'Bb4', cssClass:''      ,  keyCode: 219  },
-    { note: '4B',  key: ']',      cssId: 'B4',  cssClass:''      ,  keyCode: 221  },
-    { note: '',    key: '\\',     cssId: '',    cssClass:''      ,  keyCode: 220  },
-    { note: '',    key: 'caps',   cssId: '',    cssClass:'caps'  ,  keyCode: 20   },
-    { note: '5C',  key: 'a',      cssId: 'C5',  cssClass:''      ,  keyCode: 65   },
-    { note: '5Db', key: 's',      cssId: 'Db5', cssClass:''      ,  keyCode: 83   },
-    { note: '5D',  key: 'd',      cssId: 'D5',  cssClass:''      ,  keyCode: 68   },
-    { note: '5Eb', key: 'f',      cssId: 'Eb5', cssClass:''      ,  keyCode: 70   },
-    { note: '5E',  key: 'g',      cssId: 'E5',  cssClass:''      ,  keyCode: 71   },
-    { note: '5F',  key: 'h',      cssId: 'F5',  cssClass:''      ,  keyCode: 72   },
-    { note: '5Gb', key: 'j',      cssId: 'Gb5', cssClass:''      ,  keyCode: 74   },
-    { note: '5G',  key: 'k',      cssId: 'G5',  cssClass:''      ,  keyCode: 75   },
-    { note: '5Ab', key: 'l',      cssId: 'Ab5', cssClass:''      ,  keyCode: 76   },
-    { note: '5A',  key: ';',      cssId: 'A5',  cssClass:''      ,  keyCode: 186  },
-    { note: '5Bb', key: '\'',     cssId: 'Bb5', cssClass:''      ,  keyCode: 222  },
-    { note: '5B',  key: 'return', cssId: 'B5',  cssClass:'return',  keyCode: 13   },
-    { note: '',    key: 'shift',  cssId: '',    cssClass:'shift' ,  keyCode: 16   },
-    { note: '6C',  key: 'z',      cssId: 'C6',  cssClass:''      ,  keyCode: 90   },
-    { note: '6Db', key: 'x',      cssId: 'Db6', cssClass:''      ,  keyCode: 88   },
-    { note: '6D',  key: 'c',      cssId: 'D6',  cssClass:''      ,  keyCode: 67   },
-    { note: '6Eb', key: 'v',      cssId: 'Eb6', cssClass:''      ,  keyCode: 86   },
-    { note: '6E',  key: 'b',      cssId: 'E6',  cssClass:''      ,  keyCode: 66   },
-    { note: '6F',  key: 'n',      cssId: 'F6',  cssClass:''      ,  keyCode: 78   },
-    { note: '6Gb', key: 'm',      cssId: 'Gb6', cssClass:''      ,  keyCode: 77   },
-    { note: '6G',  key: ',',      cssId: 'G6',  cssClass:''      ,  keyCode: 188  },
-    { note: '6Ab', key: '.',      cssId: 'Ab6', cssClass:''      ,  keyCode: 190  },
-    { note: '6A',  key: '/',      cssId: 'A6',  cssClass:''      ,  keyCode: 191  },
-    { note: '',    key: 'shift',  cssId: '',    cssClass:'shift' ,  keyCode: 16   },
-    { note: '',    key: 'ctrl',   cssId: '',    cssClass:'ctrl'  ,  keyCode: 17   },
-    { note: '',    key: 'opt',    cssId: '',    cssClass:'opt'   ,  keyCode: 18   },
-    { note: '',    key: 'cmd' ,   cssId: '',    cssClass:'left-cmd',keyCode: 91   },
-    { note: '6Bb', key: 'space',  cssId: 'Bb6', cssClass:'space' ,  keyCode: 32   },
-    { note: '6B',  key: 'cmd' ,   cssId: 'B6',  cssClass:'right-cmd', keyCode: 93 },
-    { note: '7C',  key: 'opt',    cssId: 'C7',  cssClass:'opt'   ,  keyCode: 18   },
-    { note: '',    key: 'ctrl',   cssId: '',    cssClass:'ctrl'  ,  keyCode: 17   }
+    { note: '',    key: '`'         },
+    { note: '3C',  key: '1'         },
+    { note: '3Db', key: '2'         },
+    { note: '3D',  key: '3'         },
+    { note: '3Eb', key: '4'         },
+    { note: '3E',  key: '5'         },
+    { note: '3F',  key: '6'         },
+    { note: '3Gb', key: '7'         },
+    { note: '3G',  key: '8'         },
+    { note: '3Ab', key: '9'         },
+    { note: '3A',  key: '0'         },
+    { note: '3Bb', key: '-'         },
+    { note: '3B',  key: '='         },
+    { note: '',    key: 'del'       },
+    { note: '',    key: 'tab'       },
+    { note: '4C',  key: 'q'         },
+    { note: '4Db', key: 'w'         },
+    { note: '4D',  key: 'e'         },
+    { note: '4Eb', key: 'r'         },
+    { note: '4E',  key: 't'         },
+    { note: '4F',  key: 'y'         },
+    { note: '4Gb', key: 'u'         },
+    { note: '4G',  key: 'i'         },
+    { note: '4Ab', key: 'o'         },
+    { note: '4A',  key: 'p'         },
+    { note: '4Bb', key: '['         },
+    { note: '4B',  key: ']'         },
+    { note: '',    key: '\\'        },
+    { note: '',    key: 'caps'      },
+    { note: '5C',  key: 'a'         },
+    { note: '5Db', key: 's'         },
+    { note: '5D',  key: 'd'         },
+    { note: '5Eb', key: 'f'         },
+    { note: '5E',  key: 'g'         },
+    { note: '5F',  key: 'h'         },
+    { note: '5Gb', key: 'j'         },
+    { note: '5G',  key: 'k'         },
+    { note: '5Ab', key: 'l'         },
+    { note: '5A',  key: ';'         },
+    { note: '5Bb', key: '\''        },
+    { note: '5B',  key: 'return'    },
+    { note: '',    key: 'shift'     },
+    { note: '6C',  key: 'z'         },
+    { note: '6Db', key: 'x'         },
+    { note: '6D',  key: 'c'         },
+    { note: '6Eb', key: 'v'         },
+    { note: '6E',  key: 'b'         },
+    { note: '6F',  key: 'n'         },
+    { note: '6Gb', key: 'm'         },
+    { note: '6G',  key: ','         },
+    { note: '6Ab', key: '.'         },
+    { note: '6A',  key: '/'         },
+    { note: '',    key: 'shift'     },
+    { note: '',    key: 'ctrl'      },
+    { note: '',    key: 'opt'       },
+    { note: '',    key: 'left-cmd'  },
+    { note: '6Bb', key: 'space'     },
+    { note: '6B',  key: 'right-cmd' },
+    { note: '7C',  key: 'opt'       },
+    { note: '',    key: 'ctrl'      }
   ];
 
 
   // Build a reference Object for keydown events
   var keyCodeDict = {};
   for (var i in keyLibrary) {
-    keyCodeDict[keyLibrary[i].keyCode] = i;
+    var libraryObj = keyLibrary[i];
+
+    // Set keycodes from service
+    libraryObj.keyCode = KeyCodes[libraryObj.key];
+
+    // Set CSS ID. Need to change name since ID's cannot start with a number
+    libraryObj.cssId   = libraryObj.note.replace(/(^\d)(.*)/,'$2$1');
+    keyCodeDict[libraryObj.keyCode] = i;
   }
 
   // NOTE FILE NAMES (missing a few)
@@ -97,11 +104,11 @@
   }
 
   return {
-    notes: function() {
+    get notes () {
       return notes;
     },
 
-    keys: function() {
+    get keys () {
       return keyLibrary;
     },
 
