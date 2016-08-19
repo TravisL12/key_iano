@@ -36,8 +36,7 @@
     <li ng-class='{keydown: key.active, flat: key.note[2]=="b"}' ng-click='clickNote()' ng-repeat='key in keyboardLayout' class='{{key.key}}'>
       <div class='key-top'>
         <span class='letter'>{{key.key}}</span>
-        <span ng-if='!editMode' class='note'>{{key.note}}</span>
-        <select ng-if='editMode' ng-model='key.note' ng-options='note for note in notes'></select>
+        <span class='note'>{{key.note}}</span>
       </div>
     </li>
   </ul>
